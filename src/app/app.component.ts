@@ -6,6 +6,6 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  parentProp = 'some parent property text';
-  nameProp = 'Angular ' + VERSION.major;
+  parentProp: string = 'some parent property text';
+  parentNameProp: string = 'Angular ' + VERSION.major;
 }

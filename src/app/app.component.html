@@ -1,2 +1,4 @@
-<hello helloString="{{ nameProp }}"></hello>
+<hello helloProp="{{ parentNameProp }}"></hello>
+<!-- The line above is equivalent to the commented out line below  -->
+<!-- <hello [helloProp]="parentNameProp"></hello> -->
 <child-component [childComponentProp]="parentProp"></child-component>
