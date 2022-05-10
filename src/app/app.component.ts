@@ -8,4 +8,13 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent {
   parentProp: string = 'some parent property text';
   parentNameProp: string = 'Angular ' + VERSION.major;
+  someParentString: string = '';
+
+  alertMessage(msg: string) {
+    alert(msg);
+  }
+
+  setParentString(str: string){
+    this.someParentString = str;
+  }
 }

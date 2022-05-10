@@ -6,9 +6,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./output-component.css'],
 })
 export class OutputComponent {
-  @Output() childOutputProp: EventEmitter<string>;
+  @Output() childOutputEvent = new EventEmitter<string>();
 
   outputEvent(input: string) {
-    this.childOutputProp.emit(input);
+    this.childOutputEvent.emit(input);
   }
 }

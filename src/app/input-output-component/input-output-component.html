@@ -1,0 +1,7 @@
+<div class="input-output">
+  <p>Input and Output component: {{ ioInput }}</p>
+  <input #testInput />
+  <button (click)="ioTriggerEmitEvent(testInput.value)">
+    Click for output
+  </button>
+</div>
