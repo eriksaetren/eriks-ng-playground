@@ -1,0 +1,56 @@
+<!-- 
+  The simple ngFor way of rendering dynamic columns: 
+<p-table [value]="carData">
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngFor="let col of carCols">{{ col.header }}</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-car>
+    <tr>
+      <td *ngFor="let col of carCols">{{ car[col.field] }}</td>
+    </tr>
+  </ng-template>
+</p-table>
+-->
+
+<!-- 
+  More advanced way to render dynamic columns, by binding the carCols array 
+  to the [columns] property
+-->
+<p-table [columns]="carCols" [value]="carData">
+  <!-- 
+    Within the 'header' template, Columns is $implicit. 
+    Thus, let-xyz will assign columns to xyz
+  -->
+  <ng-template pTemplate="header" let-xyz>
+    <tr>
+      <th
+        style="
+          padding: 1.5rem;
+          border: 1px solid lightgrey;
+          border-width: 0 0 1px 0;
+        "
+        *ngFor="let col of xyz"
+      >
+        {{col.header}}
+      </th>
+    </tr>
+  </ng-template>
+  <!-- 
+    Within the 'body' template, Rowdata is $implicit. 
+    Thus, let-car will assign the current Rowdata to car.
+    We can also use the let operator to assign custom data to a variable,
+    as we do here with columns being assigned to derp.
+  -->
+  <ng-template pTemplate="body" let-car let-derp="columns">
+    <tr>
+      <td
+        style="padding: 1rem; border: 0px solid grey; border-width: 0 0 1px 0"
+        *ngFor="let col of derp"
+      >
+        {{car[col.field]}}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

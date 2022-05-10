@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class InputOutputComponent {
   @Input() ioInput: string = '';
   @Output() ioEventEmitter = new EventEmitter<string>();
+  public testString = 'derp';
 
   ioTriggerEmitEvent(msg: string) {
     this.ioEventEmitter.emit(msg);

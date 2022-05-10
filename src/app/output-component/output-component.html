@@ -1,3 +1,7 @@
-<p>This is the output component</p>
-<input type="text" #myInput />
-<button type="button" (click)="outputEvent(myInput.value)">Click me!</button>
+<div class="output">
+  <p>This is the output component</p>
+  <input type="text" #myInput />
+  <button type="button" (click)="outputEvent(myInput.value)">
+    Send input to parent
+  </button>
+</div>
