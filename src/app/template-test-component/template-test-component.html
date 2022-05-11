@@ -18,7 +18,15 @@
   More advanced way to render dynamic columns, by binding the carCols array 
   to the [columns] property
 -->
-<p-table [columns]="carCols" [value]="carData">
+<p-table
+  styleClass="p-datatable-lg"
+  [scrollable]="true"
+  [frozenColumns]="frozenCols"
+  scrollHeight="calc(80vh - 195px - 32px)"
+  styleClass="p-datatable-sm"
+  [columns]="carCols"
+  [value]="carData"
+>
   <!-- 
     Within the 'header' template, Columns is $implicit. 
     Thus, let-xyz will assign columns to xyz

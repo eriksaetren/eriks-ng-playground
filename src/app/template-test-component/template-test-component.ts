@@ -9,6 +9,17 @@ import { Cars } from './cars';
 export class TemplateTestComponent {
   templateTestString: string = '';
 
+  frozenCols = [
+    {
+      header: 'Vin',
+      field: 'vin',
+    },
+    {
+      header: 'Year',
+      field: 'year',
+    },
+  ];
+
   carCols = [
     {
       header: 'Vin',
@@ -29,6 +40,96 @@ export class TemplateTestComponent {
   ];
 
   carData: Cars[] = [
+    {
+      vin: '123somevin',
+      year: 2004,
+      brand: 'Ford',
+      color: 'Blue',
+    },
+    {
+      vin: '456anothervin',
+      year: 2018,
+      brand: 'Buick',
+      color: 'Green',
+    },
+    {
+      vin: 'acar1hasav2innumber3',
+      year: 2012,
+      brand: 'Chevy',
+      color: 'Red',
+    },
+    {
+      vin: '123somevin',
+      year: 2004,
+      brand: 'Ford',
+      color: 'Blue',
+    },
+    {
+      vin: '456anothervin',
+      year: 2018,
+      brand: 'Buick',
+      color: 'Green',
+    },
+    {
+      vin: 'acar1hasav2innumber3',
+      year: 2012,
+      brand: 'Chevy',
+      color: 'Red',
+    },
+    {
+      vin: '123somevin',
+      year: 2004,
+      brand: 'Ford',
+      color: 'Blue',
+    },
+    {
+      vin: '456anothervin',
+      year: 2018,
+      brand: 'Buick',
+      color: 'Green',
+    },
+    {
+      vin: 'acar1hasav2innumber3',
+      year: 2012,
+      brand: 'Chevy',
+      color: 'Red',
+    },
+    {
+      vin: '123somevin',
+      year: 2004,
+      brand: 'Ford',
+      color: 'Blue',
+    },
+    {
+      vin: '456anothervin',
+      year: 2018,
+      brand: 'Buick',
+      color: 'Green',
+    },
+    {
+      vin: 'acar1hasav2innumber3',
+      year: 2012,
+      brand: 'Chevy',
+      color: 'Red',
+    },
+    {
+      vin: '123somevin',
+      year: 2004,
+      brand: 'Ford',
+      color: 'Blue',
+    },
+    {
+      vin: '456anothervin',
+      year: 2018,
+      brand: 'Buick',
+      color: 'Green',
+    },
+    {
+      vin: 'acar1hasav2innumber3',
+      year: 2012,
+      brand: 'Chevy',
+      color: 'Red',
+    },
     {
       vin: '123somevin',
       year: 2004,
