@@ -53,12 +53,7 @@
   -->
   <ng-template pTemplate="body" let-car let-derp="columns">
     <tr>
-      <td
-        style="padding: 1rem; border: 0px solid grey; border-width: 0 0 1px 0"
-        *ngFor="let col of derp"
-      >
-        {{car[col.field]}}
-      </td>
+      <td *ngFor="let col of derp">{{car[col.field]}}</td>
     </tr>
   </ng-template>
 </p-table>
