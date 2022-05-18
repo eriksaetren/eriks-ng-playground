@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Cars } from './cars';
 
 @Component({
-  selector: 'template-test',
-  templateUrl: './template-test-component.html',
-  styleUrls: ['./template-test-component.css'],
+  selector: 'table-test',
+  templateUrl: './table-test-component.html',
+  styleUrls: ['./table-test-component.css'],
 })
-export class TemplateTestComponent {
+export class TableTestComponent {
   templateTestString: string = '';
 
   frozenCols = [

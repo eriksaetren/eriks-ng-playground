@@ -9,7 +9,7 @@ import { HelloComponent } from './hello.component';
 import { InputComponent } from './input-component/input-component';
 import { OutputComponent } from './output-component/output-component';
 import { InputOutputComponent } from './input-output-component/input-output-component';
-import { TemplateTestComponent } from './template-test-component/template-test-component';
+import { TableTestComponent } from './table-test-component/table-test-component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, TableModule],
@@ -19,7 +19,7 @@ import { TemplateTestComponent } from './template-test-component/template-test-c
     InputComponent,
     OutputComponent,
     InputOutputComponent,
-    TemplateTestComponent,
+    TableTestComponent,
   ],
   bootstrap: [AppComponent],
 })
