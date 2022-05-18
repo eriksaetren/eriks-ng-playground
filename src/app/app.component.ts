@@ -1,4 +1,10 @@
-import { AfterViewInit, Component, VERSION, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  TemplateRef,
+  VERSION,
+  ViewChild,
+} from '@angular/core';
 import { InputOutputComponent } from './input-output-component/input-output-component';
 
 @Component({

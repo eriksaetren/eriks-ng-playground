@@ -10,6 +10,7 @@ import { InputComponent } from './input-component/input-component';
 import { OutputComponent } from './output-component/output-component';
 import { InputOutputComponent } from './input-output-component/input-output-component';
 import { TableTestComponent } from './table-test-component/table-test-component';
+import { TemplateTestComponent } from './template-test/template-test-component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, TableModule],
@@ -20,6 +21,7 @@ import { TableTestComponent } from './table-test-component/table-test-component'
     OutputComponent,
     InputOutputComponent,
     TableTestComponent,
+    TemplateTestComponent,
   ],
   bootstrap: [AppComponent],
 })

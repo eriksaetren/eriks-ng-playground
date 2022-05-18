@@ -1,13 +1,23 @@
 <hello helloProp="{{ parentNameProp }}"></hello>
 <!-- The line above is equivalent to the commented out line below  -->
 <!-- <hello [helloProp]="parentNameProp"></hello> -->
+
+<hr />
+<template-test></template-test>
+<hr />
+
+<br />
 <input-component [childInputProp]="parentProp"></input-component>
+
+<br />
 <output-component (childOutputEvent)="alertMessage($event)"></output-component>
+
+<br />
 <input-output-component
   [ioInput]="someParentString"
   (ioEventEmitter)="setParentString($event)"
 ></input-output-component>
 
-<table-test></table-test>
+<br />
 
-<p>{{ someParentString }}</p>
+<table-test></table-test>

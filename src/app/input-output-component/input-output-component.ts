@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./input-output-component.css'],
 })
 export class InputOutputComponent {
-  @Input() ioInput: string = '';
+  @Input() ioInput: string = 'test';
   @Output() ioEventEmitter = new EventEmitter<string>();
   public testString = 'derp';
 
