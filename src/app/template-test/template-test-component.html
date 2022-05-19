@@ -1,4 +1,23 @@
-<ng-template #defaultTabButtons>
-  <button class="tab-button" (click)="login()">{{loginText}}</button>
-  <button class="tab-button" (click)="signUp()">{{signUpText}}</button>
-</ng-template>
+<div class="tableData" *ngIf="tableData.length > 0 else loading">
+  <p-table
+    [columns]="tableColumns"
+    [value]="tableData"
+    scrollHeight="calc(50vh - 195px - 32px)"
+    [scrollable]="true"
+    styleClass="p-datatable-lg p-datatable-striped"
+  >
+    <ng-template pTemplate="header" let-tableCols>
+      <tr>
+        <th *ngFor="let c of tableCols">{{c.header}}</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-lesson let-tableCols="columns">
+      <tr>
+        <td *ngFor="let col of tableCols">{{ lesson[col.field] }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+<ng-template #loading> Loading... </ng-template>

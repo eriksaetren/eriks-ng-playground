@@ -8,7 +8,34 @@ import { Component } from '@angular/core';
 export class TemplateTestComponent {
   loginText = 'Login';
   signUpText = 'Sign Up';
-  lessons = ['Lesson 1', 'Lessons 2'];
+
+  tableColumns = [
+    {
+      header: 'Lesson Name',
+      field: 'lesson_name',
+    },
+    {
+      header: 'Teacher First Name',
+      field: 'teacher_first_name',
+    },
+    {
+      header: 'Teacher Last Name',
+      field: 'teacher_last_name',
+    },
+  ];
+
+  tableData = [
+    {
+      lesson_name: 'Intro to CS',
+      teacher_first_name: 'Rick',
+      teacher_last_name: 'Mercer',
+    },
+    {
+      lesson_name: 'Data Structurs',
+      teacher_first_name: 'Bart',
+      teacher_last_name: 'Simpson',
+    },
+  ];
 
   login() {
     console.log('Login');

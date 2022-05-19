@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Cars } from './cars';
+import { CustomerServiceComponent } from './customer-service';
 
 @Component({
   selector: 'table-test',
   templateUrl: './table-test-component.html',
   styleUrls: ['./table-test-component.css'],
 })
-export class TableTestComponent {
+export class TableTestComponent implements OnInit {
   templateTestString: string = '';
+
+  constructor(private customerService: CustomerServiceComponent) {}
 
   frozenCols = [
     {
@@ -149,4 +152,6 @@ export class TableTestComponent {
       color: 'Red',
     },
   ];
+
+  ngOnInit() {}
 }
