@@ -22,10 +22,9 @@
   <p-table
     styleClass="p-datatable-lg p-datatable-striped"
     [scrollable]="true"
-    [frozenColumns]="frozenCols"
     scrollHeight="calc(80vh - 195px - 32px)"
-    [columns]="carCols"
-    [value]="carData"
+    [columns]="customerCols"
+    [value]="customers"
   >
     <!-- 
     Within the 'header' template, Columns is $implicit. 
@@ -42,9 +41,9 @@
     We can also use the let operator to assign custom data to a variable,
     as we do here with columns being assigned to derp.
   -->
-    <ng-template pTemplate="body" let-car let-derp="columns">
+    <ng-template pTemplate="body" let-customer let-derp="columns">
       <tr>
-        <td *ngFor="let col of derp">{{car[col.field]}}</td>
+        <td *ngFor="let col of derp">{{customer[col.field][col.subfield]}}</td>
       </tr>
     </ng-template>
   </p-table>

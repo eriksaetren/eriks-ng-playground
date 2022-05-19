@@ -11,9 +11,10 @@ import { OutputComponent } from './output-component/output-component';
 import { InputOutputComponent } from './input-output-component/input-output-component';
 import { TableTestComponent } from './table-test-component/table-test-component';
 import { TemplateTestComponent } from './template-test/template-test-component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, TableModule],
+  imports: [BrowserModule, FormsModule, TableModule, HttpClientModule],
   declarations: [
     AppComponent,
     HelloComponent,

@@ -28,6 +28,6 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.ioComponent.testString);
+    //console.log(this.ioComponent.testString);
   }
 }
