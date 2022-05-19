@@ -12,6 +12,7 @@ import { InputOutputComponent } from './input-output-component/input-output-comp
 import { TableTestComponent } from './table-test-component/table-test-component';
 import { TemplateTestComponent } from './template-test/template-test-component';
 import { HttpClientModule } from '@angular/common/http';
+import { CustomerTableExtractorPipe } from './table-test-component/pipes/customer-table-extractor';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, TableModule, HttpClientModule],
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     InputOutputComponent,
     TableTestComponent,
     TemplateTestComponent,
+    CustomerTableExtractorPipe,
   ],
   bootstrap: [AppComponent],
 })

@@ -43,7 +43,9 @@
   -->
     <ng-template pTemplate="body" let-customer let-derp="columns">
       <tr>
-        <td *ngFor="let col of derp">{{customer[col.field][col.subfield]}}</td>
+        <td *ngFor="let col of derp">
+          {{customer | customerTableExtractor: col.field: col.subfield}}
+        </td>
       </tr>
     </ng-template>
   </p-table>
