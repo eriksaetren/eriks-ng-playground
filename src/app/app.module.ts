@@ -13,9 +13,17 @@ import { TableTestComponent } from './table-test-component/table-test-component'
 import { TemplateTestComponent } from './template-test/template-test-component';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomerTableExtractorPipe } from './table-test-component/pipes/customer-table-extractor';
+import { BadgeModule } from 'primeng/badge';
+import { CustomerStatusToSeverityPipe } from './table-test-component/pipes/customer-status-to-severity-pipe';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, TableModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    TableModule,
+    HttpClientModule,
+    BadgeModule,
+  ],
   declarations: [
     AppComponent,
     HelloComponent,
@@ -25,6 +33,7 @@ import { CustomerTableExtractorPipe } from './table-test-component/pipes/custome
     TableTestComponent,
     TemplateTestComponent,
     CustomerTableExtractorPipe,
+    CustomerStatusToSeverityPipe,
   ],
   bootstrap: [AppComponent],
 })

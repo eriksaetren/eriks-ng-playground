@@ -5,11 +5,12 @@ import { Customer } from '../customers';
   name: 'customerTableExtractor',
 })
 export class CustomerTableExtractorPipe implements PipeTransform {
-  public transform(cust: Customer, field: string, subfield: string): any {
-    if (typeof cust[field] === 'object') {
-      return cust[field][subfield];
+  public transform(customer: Customer, field: string, subfield: string): any {
+    // If the customer field is an object (such as contry), we extract the subfield
+    if (typeof customer[field] === 'object') {
+      return customer[field][subfield];
     } else {
-      return cust[field];
+      return customer[field];
     }
   }
 }
