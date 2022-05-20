@@ -33,7 +33,10 @@
   -->
     <ng-template pTemplate="header" let-xyz>
       <tr>
-        <th [pSortableColumn]="col.field" *ngFor="let col of xyz">
+        <th
+          [pSortableColumn]="col | customerTableSortableColumn"
+          *ngFor="let col of xyz"
+        >
           {{col.header}} <p-sortIcon field="{{ col.header }}"></p-sortIcon>
         </th>
       </tr>
@@ -43,11 +46,11 @@
     Thus, let-car will assign the current Rowdata to car.
     We can also use the let operator to assign custom data to a variable,
     as we do here with columns being assigned to derp.
-  -->
+    -->
     <ng-template pTemplate="body" let-customer let-derp="columns">
       <tr>
         <ng-container *ngFor="let col of derp">
-          <ng-container *ngIf="col.field === 'status' else normalData">
+          <ng-container *ngIf="col.field === 'status' else activity">
             <td>
               <p-badge
                 value="{{ customer[col.field] }}"
@@ -55,10 +58,16 @@
               ></p-badge>
             </td>
           </ng-container>
+          <ng-template
+            #activity
+          >
+            <ng-container 
+            *ngIf="col.field === 'activity' else normalData">
+            </ng-container>
+          </ng-template>
           <ng-template #normalData>
             <td>
-              {{customer | customerTableExtractor: col.field:
-              col.subfield}}
+              {{customer | customerTableExtractor: col.field: col.subfield}}
             </td>
           </ng-template>
         </ng-container>

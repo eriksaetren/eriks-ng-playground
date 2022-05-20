@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CustomerTableExtractorPipe } from './table-test-component/pipes/customer-table-extractor';
 import { BadgeModule } from 'primeng/badge';
 import { CustomerStatusToSeverityPipe } from './table-test-component/pipes/customer-status-to-severity-pipe';
+import { CustomerTableSortableColumnPipe } from './table-test-component/pipes/customer-table-sortable-column';
 
 @NgModule({
   imports: [
@@ -34,6 +35,7 @@ import { CustomerStatusToSeverityPipe } from './table-test-component/pipes/custo
     TemplateTestComponent,
     CustomerTableExtractorPipe,
     CustomerStatusToSeverityPipe,
+    CustomerTableSortableColumnPipe,
   ],
   bootstrap: [AppComponent],
 })

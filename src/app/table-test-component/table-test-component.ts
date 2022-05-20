@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Cars } from './cars';
 import { CustomerServiceComponent } from './customer-service';
 import { Customer } from './customers';
 
@@ -14,187 +13,46 @@ export class TableTestComponent implements OnInit {
 
   constructor(private customerService: CustomerServiceComponent) {}
 
-  frozenCols = [
-    {
-      header: 'Vin',
-      field: 'vin',
-    },
-    {
-      header: 'Year',
-      field: 'year',
-    },
-  ];
-
   customerCols = [
     {
       header: 'ID',
       field: 'id',
-      subfield: ''
+      subfield: '',
     },
     {
       header: 'Name',
       field: 'name',
-      subfield: ''
+      subfield: '',
     },
     {
       header: 'Country',
       field: 'country',
-      subfield: 'name'
+      subfield: 'name',
     },
     {
       header: 'Company',
       field: 'company',
-      subfield: ''
+      subfield: '',
     },
     {
       header: 'Date',
       field: 'date',
-      subfield: ''
+      subfield: '',
     },
     {
       header: 'Status',
       field: 'status',
-      subfield: ''
+      subfield: '',
     },
     {
       header: 'Activity',
       field: 'activity',
-      subfield: ''
+      subfield: '',
     },
     {
       header: 'Representative Name',
       field: 'representative',
-      subfield: 'name'
-    },
-  ];
-
-  carCols = [
-    {
-      header: 'Vin',
-      field: 'vin',
-    },
-    {
-      header: 'Year',
-      field: 'year',
-    },
-    {
-      header: 'Brand',
-      field: 'brand',
-    },
-    {
-      header: 'Color',
-      field: 'color',
-    },
-  ];
-
-  carData: Cars[] = [
-    {
-      vin: '123somevin',
-      year: 2004,
-      brand: 'Ford',
-      color: 'Blue',
-    },
-    {
-      vin: '456anothervin',
-      year: 2018,
-      brand: 'Buick',
-      color: 'Green',
-    },
-    {
-      vin: 'acar1hasav2innumber3',
-      year: 2012,
-      brand: 'Chevy',
-      color: 'Red',
-    },
-    {
-      vin: '123somevin',
-      year: 2004,
-      brand: 'Ford',
-      color: 'Blue',
-    },
-    {
-      vin: '456anothervin',
-      year: 2018,
-      brand: 'Buick',
-      color: 'Green',
-    },
-    {
-      vin: 'acar1hasav2innumber3',
-      year: 2012,
-      brand: 'Chevy',
-      color: 'Red',
-    },
-    {
-      vin: '123somevin',
-      year: 2004,
-      brand: 'Ford',
-      color: 'Blue',
-    },
-    {
-      vin: '456anothervin',
-      year: 2018,
-      brand: 'Buick',
-      color: 'Green',
-    },
-    {
-      vin: 'acar1hasav2innumber3',
-      year: 2012,
-      brand: 'Chevy',
-      color: 'Red',
-    },
-    {
-      vin: '123somevin',
-      year: 2004,
-      brand: 'Ford',
-      color: 'Blue',
-    },
-    {
-      vin: '456anothervin',
-      year: 2018,
-      brand: 'Buick',
-      color: 'Green',
-    },
-    {
-      vin: 'acar1hasav2innumber3',
-      year: 2012,
-      brand: 'Chevy',
-      color: 'Red',
-    },
-    {
-      vin: '123somevin',
-      year: 2004,
-      brand: 'Ford',
-      color: 'Blue',
-    },
-    {
-      vin: '456anothervin',
-      year: 2018,
-      brand: 'Buick',
-      color: 'Green',
-    },
-    {
-      vin: 'acar1hasav2innumber3',
-      year: 2012,
-      brand: 'Chevy',
-      color: 'Red',
-    },
-    {
-      vin: '123somevin',
-      year: 2004,
-      brand: 'Ford',
-      color: 'Blue',
-    },
-    {
-      vin: '456anothervin',
-      year: 2018,
-      brand: 'Buick',
-      color: 'Green',
-    },
-    {
-      vin: 'acar1hasav2innumber3',
-      year: 2012,
-      brand: 'Chevy',
-      color: 'Red',
+      subfield: 'name',
     },
   ];
 

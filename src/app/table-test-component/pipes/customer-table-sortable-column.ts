@@ -4,11 +4,14 @@ import { Pipe } from '@angular/core';
   name: 'customerTableSortableColumn',
 })
 export class CustomerTableSortableColumnPipe {
-  transform(columnVarName: string, field: string, subfield: string) {
-    if (subfield !== '') {
-      return columnVarName + '.' + field + '.' + subfield;
-    } else {
-      return columnVarName + '.' + field;
+  transform(column: object) {
+    // If there is a subfield, we want to include that in the returned expression
+    if (column['subfield']) {
+      return column['field'] + '.' + column['subfield'];
+    }
+    // No subfield
+    else {
+      return column['field'];
     }
   }
 }
