@@ -1,3 +1,9 @@
 <div class="input">
   <p>This is the input component. Interpolation: {{ childInputProp }}</p>
+  <p
+    #pTestClass
+    [ngClass]="{ 'ngTestClass': testNumber > 5 ? 'trueTest' : 'falseTest' }"
+  >
+    {{ testNumber }}
+  </p>
 </div>

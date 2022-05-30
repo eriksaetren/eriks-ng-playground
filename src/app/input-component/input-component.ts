@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class InputComponent {
   @Input() childInputProp: string = '';
+
+  testNumber = 10;
 }
